@@ -6,7 +6,9 @@ import { PageComponentComponent } from './pages/page-component/page-component.co
 
 const routes: Routes = [
   { path: '',   component: HomeComponent  },
-  { path: '*', component: PageComponentComponent  },
+  { path: 'prodotti', component: PageComponentComponent  },
+  { path: 'azienda', component: PageComponentComponent  },
+  { path: 'galleria', component: PageComponentComponent  },
   { path: 'contatti', component: HomeComponent  },
 ];
 

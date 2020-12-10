@@ -1,0 +1,20 @@
+
+
+:host {
+    display: block;
+    border-bottom: 1px solid #444;
+    margin-bottom: 22px;
+}
+
+.widget-titolo{
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.widget-titolo.open::after{
+    content: "-";
+}
+.widget-titolo::after {
+    content: "+";
+    float: right;
+}

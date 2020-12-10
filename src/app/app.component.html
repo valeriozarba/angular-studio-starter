@@ -1,37 +1,38 @@
 
 
-
-<nav class="navbar fixed-top navbar-toggleable-md navbar-expand-md navbar-light bg-faded">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-      <img src="assets/img/logo.svg" class="img-fluid">
-    </a>
-    <button class="navbar-toggler ml-auto" type="button" 
-    data-toggle="collapse" data-target="#navbarNav" 
-    aria-controls="navbarNav" aria-expanded="false" 
-    aria-label="Toggle navigation" (click)="isCollapsed=!isCollapsed">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" [ngbCollapse]="isCollapsed">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/azienda">Azienda</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/prodotti">Prodotti</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" href="/galleria">Galleria</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" href="/contatti">Contatti</a>
-        </li>
-      </ul>
+<div class="main-view animated slideInleft">  
+  <nav class="navbar fixed-top navbar-toggleable-md navbar-expand-md navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="assets/img/logo.svg" class="img-fluid">
+      </a>
+      <button #navbarToggler class="navbar-toggler ml-auto" type="button" 
+      data-toggle="collapse" data-target="#navbarNav" 
+      aria-controls="navbarNav" aria-expanded="false" 
+      aria-label="Toggle navigation" (click)="isCollapsed=!isCollapsed">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" [ngbCollapse]="isCollapsed">
+        <ul class="navbar-nav" routerLinkActive="active">
+          <li class="nav-item active">
+            <a class="nav-link" routerLink="">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a (click)="collapseNav()" class="nav-link" routerLink="azienda" role="button">Azienda</a>
+          </li>
+          <li class="nav-item">
+            <a (click)="collapseNav()" class="nav-link" routerLink="prodotti" role="button">Prodotti</a>
+          </li>
+          <li class="nav-item">
+            <a (click)="collapseNav()" class="nav-link" routerLink="galleria" role="button">Galleria</a>
+          </li>
+          <li class="nav-item">
+            <a (click)="collapseNav()" class="nav-link" routerLink="contatti" role="button">Contatti</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
-<router-outlet></router-outlet>
+  </nav>
+  <router-outlet></router-outlet>
+</div>
 <app-footer></app-footer>

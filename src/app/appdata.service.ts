@@ -15,10 +15,25 @@ export class AppdataService {
 
   contentText = [
     {
-      unique: 'home-page-1',
-      title: 'Contact 001',
-      description: 'Contact 001 des',
-      email: 'c001@email.com'
+      unique: 'azienda',//corrisponde con l'uri della pagina
+      titolo: 'Azienda',
+      description: 'Contenuto della pagina',
+      fileOnline: 'URL-LINK',
+      isHtml: false
+    },
+    {
+      unique: 'prodotti',//corrisponde con l'uri della pagina
+      titolo: 'Prodotti',
+      description: 'Contenuto della pagina',
+      fileOnline: 'URL-LINK',
+      isHtml: false
+    },
+    {
+      unique: 'galleria',//corrisponde con l'uri della pagina
+      titolo: 'Galleria',
+      description: 'Contenuto della pagina',
+      fileOnline: 'URL-LINK',
+      isHtml: false
     },
   ];
 
@@ -29,8 +44,8 @@ export class AppdataService {
   }
 
 
-  getDataText(): any{
-    return this.contentText;
+  getDataContent(itemid:string): any{
+    return this.contentText.filter(item=>(item.unique==itemid))[0];
   }
 
 }

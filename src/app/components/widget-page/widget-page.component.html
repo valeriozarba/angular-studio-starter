@@ -1,5 +1,10 @@
 
 <div class="widget-block">
-    <h3 class="widget-titolo"><a href="#nameid" data-toggle="collapase" data-parent="#accordion">{{titolo}}</a></h3>
-    <div class="widget-content collapase" id="nameid">{{dataName}}</div>
+    <h3 [class]="getClassCollapse()" (click)="isCollapsed = !isCollapsed"
+    [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+        {{titolo}}
+    </h3>
+    <div class="collapse" [id]="idname" [ngbCollapse]="isCollapsed">
+        <div class="widget-content">{{dataName}}</div>
+    </div>
 </div>

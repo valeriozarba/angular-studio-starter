@@ -7,13 +7,20 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class WidgetPageComponent implements OnInit {
 
+  @Input() idname:string;
   @Input() titolo: string;
   @Input() dataName: string;
+  @Input() groupref:string;
 
+  isCollapsed:boolean=true;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  getClassCollapse(){
+    return "widget-titolo "+((this.isCollapsed)?"":"open");
   }
 
 }
