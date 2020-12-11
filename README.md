@@ -2,8 +2,13 @@
 
 Per avviare la piattaforma come sviluppo eseguire `npm install` 
 
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
+
+L'idea della piattaforma è riuscire a gestire in maniera semplice ed efficace un sito sviluppato in angular.
+### Check list delle funzionalità
+- gestione delle pagine
+- gestione dei media
+- routing automatico per le pagine figlie
 
 ## Development server
 

@@ -1,4 +1,7 @@
 <div class="page-title">
     <h3>{{titolo}}</h3>
 </div>
-<p>page-compoenent works!</p>
+
+<div class="top-100" [innerHTML]="contentData"></div>
+
+<app-galleria *ngIf="isGallery"></app-galleria>

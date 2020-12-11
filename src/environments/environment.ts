@@ -3,7 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+    production: false,
+    email: 'test@email.it',
+    telefono: '333123456',
+    indirizzo: 'Via Roma 21',
+    nomeAzienda: 'Prova Azienda',
+    contacts:[
+      {email:'contatto@prova.it',telefono:'+39 123456789',indirizzo:''}
+    ]
 };
 
 /*

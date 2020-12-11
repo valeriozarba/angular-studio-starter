@@ -5,6 +5,6 @@
         {{titolo}}
     </h3>
     <div class="collapse" [id]="idname" [ngbCollapse]="isCollapsed">
-        <div class="widget-content">{{dataName}}</div>
+        <div class="widget-content" [innerHTML]="contentData"></div>
     </div>
 </div>

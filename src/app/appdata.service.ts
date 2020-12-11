@@ -1,46 +1,74 @@
 import { Injectable } from '@angular/core';
+import { BlockContent } from './models/block-content';
+import { MenuItem } from './models/menu-item';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AppdataService {
-  contactInfo = [
-    {
-      email: 'test@email.it',
-      telefono: '333123456',
-      indirizzo: 'Via Roma 21',
-      nomeAzienda: 'Prova Azienda'
-    },
-  ];
 
-  contentText = [
+  menuList:MenuItem[];
+
+  contactInfo:string;
+
+  contentText:BlockContent[]=[
     {
-      unique: 'azienda',//corrisponde con l'uri della pagina
+      unique: 'azienda',
       titolo: 'Azienda',
-      description: 'Contenuto della pagina',
-      fileOnline: 'URL-LINK',
-      isHtml: false
+      description: '<p>Contenuto della pagina azienda</p>',
+      isPage: true,
+      showGallery:false
     },
     {
-      unique: 'prodotti',//corrisponde con l'uri della pagina
+      unique: 'prodotti',
       titolo: 'Prodotti',
-      description: 'Contenuto della pagina',
+      description: 'Pagina prodotto',
       fileOnline: 'URL-LINK',
-      isHtml: false
+      isPage: true,
+      showGallery:false
     },
     {
       unique: 'galleria',//corrisponde con l'uri della pagina
       titolo: 'Galleria',
-      description: 'Contenuto della pagina',
+      description: 'Pagina galleria',
       fileOnline: 'URL-LINK',
-      isHtml: false
+      isPage: true,//definisce il rendere completo di una pagina
+      showGallery:true
     },
+    {
+      unique: 'footer-box-1',//corrisponde con l'uri della pagina
+      titolo: 'Chi siamo',
+      description: '<ul><li><a routerLink=\"\">Link 1</li></ul>',
+      fileOnline: 'URL-LINK',
+      isPage: false,//a false si tratta di un blocco
+      showGallery:false
+    },
+    {
+      unique: 'footer-box-2',//corrisponde con l'uri della pagina
+      titolo: 'Contatti',
+      description: 'Pagina galleria',
+      fileOnline: '<ul><li>Link 1</li></ul>',
+      isPage: false,//a false si tratta di un blocco
+      showGallery:false
+    },
+    {
+      unique: 'footer-box-3',//corrisponde con l'uri della pagina
+      titolo: 'Sitemap',
+      description: '<ul><li>Link 1</li></ul>',
+      fileOnline: 'URL-LINK',
+      isPage: false,//a false si tratta di un blocco
+      showGallery:false
+    }
   ];
 
-  constructor() { }
+  constructor() {}
 
   getContactInfo(): any{
     return this.contactInfo;
+  }
+
+  addMenuItem(menu:MenuItem): void{
+    this.menuList.push(menu);
   }
 
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AppdataService } from 'src/app/appdata.service';
 
 @Component({
   selector: 'app-footer',
@@ -10,6 +12,7 @@ export class FooterComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+   
   }
 
 }
